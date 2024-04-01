@@ -8,7 +8,7 @@ class B2GuessingGame extends ConsoleProgram {
     print: "too high, guess again." If they guess too low, print: "too low, guess again".
     If they guess the number, let the program stop and print "congratulations". If
     they've guessed incorrectly after 5 attempts, print "Nice Try"
-    * @author: Emma Chan and Areya ES
+    * @author: Areya ES
     */
    
     public void run() {
@@ -18,25 +18,29 @@ class B2GuessingGame extends ConsoleProgram {
         int Random = myRandom.nextInt(101);
 
         // user imput
-        int guess = readInt(" Enter your guess: ");
+        int guess = readInt("Enter your guess: "); //guess 1
 
         // outputs
-        while (true){
-        if (guess > Random){
-            System.out.println("Too high, guess again");
-            guess = readInt("Guess again: ");
+        int counter = 0;
+        // System.out.println("The random number is " + Random); // Test feature 
+        
+        while (counter < 4){ //guess 2 thru 5
+            
             if (guess > Random){
-                System.out.println("Too high, guess again");
+            guess = readInt("Too high, guess again. ");
             }
             else if (guess < Random){
-                System.out.println("Too low, guess again");
-                guess = readInt("Try again: ");
+                guess = readInt("Too low, guess again. ");
             }
             else if (guess == Random) {
                 System.out.println("Congradulations!");
                 break;
-            }
-        }
+            } 
+        counter++;
     }
+    if (counter == 4){
+    System.out.println("Nice Try");
+    }
+
     }
 }
