@@ -23,7 +23,6 @@ class C2EveryNth extends ConsoleProgram {
 
         for (int count = 0; count < intUserLength; count++){
             if (count % intN == 0){
-            //System.out.print(strUserString.substring(count, count));
             System.out.print(strUserString.charAt(count));
             }
         }

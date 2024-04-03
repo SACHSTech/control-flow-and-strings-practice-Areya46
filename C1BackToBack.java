@@ -14,7 +14,6 @@ class C1BackToBack extends ConsoleProgram {
 
         // Input form user 
         word = readLine("");
-        word.length();
         System.out.printf("%s" + word + "%s", word.substring(word.length() - 1), word.substring(word.length() - 1));
       
     }
